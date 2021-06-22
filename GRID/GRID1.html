@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        .wrapper{
+            display: grid;
+            grid-template-columns: 70% 30%; /* сколько места будут занимать колонки */
+            /*grid-column-gap: 1em; /* отступ по вертикали */
+            /*grid-row-gap: 1em; /* отступ по горизонтали */
+
+            grid-gap: 1em; /* отступы по вертикали и по горизонтали*/
+        }
+        .wrapper > div {
+            padding: 1em;
+            background-color: rgb(255, 174, 0);
+        }
+        .wrapper > div.light {
+            padding: 1em;
+            background-color: rgba(255, 174, 0, 0.541);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Officia perspiciatis culpa, laudantium id reprehenderit perferendis totam magni?
+            Commodi natus, tempora rerum aspernatur sint eveniet fuga.
+            Quisquam doloremque ab, repellat beatae alias itaque saepe a tenetur?
+            Minima placeat, atque esse et itaque fugit molestias in dolores quidem perspiciatis
+            necessitatibus delectus vel quaerat asperiores possimus? Dolorem doloremque, ipsam,
+            aperiam quia nisi ullam minus deserunt quod consectetur perferendis hic. Aspernatur fuga laborum sint!
+        </div>
+        <div class="light">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Optio laborum aut ipsum numquam architecto fugiat saepe cumque 
+            neque id a soluta dolor, harum non temporibus repellendus officia enim.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Officia perspiciatis culpa, laudantium id reprehenderit perferendis totam magni?
+            Commodi natus, tempora rerum aspernatur sint eveniet fuga.
+            Quisquam doloremque ab, repellat beatae alias itaque saepe a tenetur?
+            Minima placeat, atque esse et itaque fugit molestias in dolores quidem perspiciatis
+            necessitatibus delectus vel quaerat asperiores possimus? Dolorem doloremque, ipsam,
+            aperiam quia nisi ullam minus deserunt quod consectetur perferendis hic. Aspernatur fuga laborum sint!
+        </div>
+        <div class="light">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Optio laborum aut ipsum numquam architecto fugiat saepe cumque 
+            neque id a soluta dolor, harum non temporibus repellendus officia enim.
+        </div>
+    </div>
+</body>
+</html>

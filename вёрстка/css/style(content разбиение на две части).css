@@ -1,0 +1,118 @@
+* {
+    /* Согласно спецификации CSS ширина блока складывается из ширины контента (width), 
+    значений отступов (margin), полей (padding) и границ (border). Аналогично обстоит и с высотой блока. 
+    Свойство box-sizing позволяет изменить этот алгоритм, чтобы свойства width и height 
+    задавали размеры не контента, а размеры блока. */
+    /* border-box Свойства width и height включают в себя значения полей и границ, но не отступов (margin). */
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-size: 30px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+  /* close commented backslash hack */
+
+/* расположение */
+.header {
+    margin-bottom: 10px;
+}
+
+/* окрас, стиль */
+.inner-header {
+    background: #4169E1;
+    height: 200px;
+}
+
+.content {
+    width: 40%;
+    float: left;
+}
+
+.content-1 {
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+}
+
+.inner-content-1 {
+    background: brown;
+    min-height: 400px;
+}
+
+.content-2 {
+    width: 50%;
+    float: left;
+}
+
+.inner-content-2 {
+    background: brown;
+    min-height: 400px;
+}
+
+.inner-content {
+    background: #4169E1;
+    min-height: 710px;
+    padding: 10px;
+}
+
+.sidebars {
+    width: 60%;
+    float: left;
+}
+
+.sidebar-1 {
+    width: 33.33%;
+    float: left;
+    padding-left: 10px;
+}
+
+.inner-sidebar-1 {
+    background: #4169E1;
+    min-height: 500px;
+}
+
+.sidebar-2 {
+    width: 33.33%;
+    float: left;
+    padding-left: 10px;
+}
+
+.inner-sidebar-2 {
+    background: #4169E1;
+    min-height: 500px;
+}
+
+.sidebar-3 {
+    width: 33.33%;
+    float: left;
+    padding-left: 10px;
+}
+
+.inner-sidebar-3 {
+    background: #4169E1;
+    min-height: 500px;
+}
+
+.footer {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.inner-footer {
+    background: #4169E1;
+    height: 200px;
+}
