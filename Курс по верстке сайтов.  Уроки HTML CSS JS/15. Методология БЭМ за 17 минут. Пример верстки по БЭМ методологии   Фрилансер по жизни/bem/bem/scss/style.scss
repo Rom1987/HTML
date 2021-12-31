@@ -1,0 +1,250 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+%tplBody {
+	max-width: 823px;
+	margin: 0px auto; // центрирует блок, если имеется width
+}
+
+%tplHeader {
+	margin: 0px 0px 65px 0px;
+}
+
+body {
+	font-family: Lato;
+}
+
+.about {
+	margin: 0 0 95px 0;
+
+	&__body {
+		@extend %tplBody;
+	}
+
+	&__header {
+		@extend %tplHeader;
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__text {
+		max-width: 688px;
+		color: #868585;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		line-height: 25.89px;
+		margin: 0px auto;
+	}
+
+	&__row {
+		display: flex;
+		font-size: 0;
+		margin: 0px -15px;
+	}
+
+	&__column {
+		padding: 0px 15px;
+		flex: 0 0 33.333%;
+	}
+}
+
+.title {
+	font-size: 34px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 8.95px;
+	position: relative;
+	text-align: center;
+	padding: 0px 0px 30px 0px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 50px;
+		bottom: 0;
+		height: 1px;
+		left: 50%;
+		background-color: #000;
+		margin: 0px 0px 0px -25px;
+	}
+}
+
+.item-about {
+	&__icon {
+		margin: 0px auto 40px auto;
+		border-radius: 50%;
+		width: 92px;
+		height: 92px;
+		border: 2px solid #f1f1f1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		text-align: center;
+		color: #000000;
+		font-size: 22px;
+		text-transform: uppercase;
+		letter-spacing: 3.52px;
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__text {
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+
+.portfolio {
+	background: #F3F3F3;
+	padding: 108px 0px 0px 0px;
+
+	&__body {
+		max-width: 1100px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__header {
+		@extend %tplHeader;
+	}
+
+	&__title {}
+
+	&__menu {
+		margin: 40px 0 5px;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 0 40px;
+		}
+	}
+
+	&__elem_active {
+		color: #CABFA3;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 1em;
+		grid-row-gap: .5em;
+		grid-auto-rows: minmax(350px, auto);
+	}
+
+	&__item {
+		background-color: #EBEBEB;
+	}
+
+	button {
+		display: inline-block;
+		margin: 32px 0 31px 0;
+		padding: 8.5px 19.5px 9px 22px;
+		border: 1px solid #000;
+		letter-spacing: 0.47px;
+		text-align: center;
+		color: #000000;
+	}
+}
+
+.our-partners {
+	background: url('../img/our-partners/our-partners.png') center/100% no-repeat;
+	padding: 50px;
+
+	&__body {
+		text-align: center;
+	}
+
+	&__title {
+		margin: 0 0 96px 0;
+		font-size: 30px;
+		font-weight: 300;
+		letter-spacing: 0.92px;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	&__img {
+		letter-spacing: 109px;
+	}
+
+}
+
+.contact {
+	margin: 184px 0 0 0;
+
+	&__body {
+		@extend %tplBody;
+	}
+
+	&__header {
+		@extend %tplHeader;
+	}
+
+	&__content {}
+
+	&__inner-content {
+		display: flex;
+		justify-content: space-between;
+		border: 1px solid #000;
+	}
+
+	&__left-column {
+		display: flex;
+		border: 1px solid #000;
+		// flex: 0 0 50%;
+		flex-wrap: wrap;
+	}
+
+	&__row-header {}
+
+	&__item {
+		flex: 0 0 50%;
+	}
+
+	&__row-footer {
+		flex: 0 0 100%;
+	}
+
+	&__right-column {
+		border: 1px solid #000;
+		flex: 0 0 50%;
+	}
+}
+
+.about {
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+input {
+	height: 35px;
+}
+
+input,
+textarea {
+	border-top: 1px solid #000;
+	background: #F9F7F7;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+}

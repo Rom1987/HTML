@@ -1,0 +1,20 @@
+Отступы между картинками
+====================================
+.slider {
+	display: flex;
+	overflow: hidden;
+	margin: -25px 0;
+	padding: 25px 0;
+}
+.slider__item {
+	text-align: center;
+	flex: 0 1 33.333%;
+}
+.slider__image {
+	width: 150px;
+	height: 150px;
+	margin: 0px auto;
+	border-radius: 50%;
+	background-color: #7a956b;
+	box-shadow: 0 0 20px #d9f5c8;
+}

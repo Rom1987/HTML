@@ -1,0 +1,8 @@
+Расположение объекта по центру с помощью transform
+===================================================
+.content__translate {
+	transform: translate(-50%, 0px);
+	position: relative;
+	left: 50%;
+	background-color: #794f45;
+}

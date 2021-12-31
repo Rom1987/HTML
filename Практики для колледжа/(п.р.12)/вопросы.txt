@@ -1,0 +1,16 @@
+1	Могут ли окна иметь более одного названия?
+MsgWindow=window.open("sesame.html")
+Следующее утверждение создает окно "homeWindow", которое показывает домашнюю страницу Netscape: 
+homeWindow=window.open("http://www.netscape.com") 
+Окна могут иметь два названия. Когда вы создаете окно, имя окна 
+не требуется. Но если нужно обратиться к окну из другого окна, 
+то окно должно иметь свое уникальное имя (в данном случае "displayWindow"). 
+
+2	При помощи каких команд осуществляется открытие нового окна браузера 
+и загрузка в него страницы?
+open("sesame.html", "displayWindow",
+"width=250,height=100,status=no,toolbar=no,menubar=no,scrollbars=no");
+
+3	Каким образом осуществляется задание параметров открываемого окна?
+open("sesame.html", "displayWindow",
+"width=250,height=100,status=no,toolbar=no,menubar=no,scrollbars=no");

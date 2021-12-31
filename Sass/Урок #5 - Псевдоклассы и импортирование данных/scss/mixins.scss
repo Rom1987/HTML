@@ -1,0 +1,31 @@
+@mixin link($link, $hover, $active, $visited) {
+  a {
+    color: $link;
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &:visited {
+      color: $visited;
+    }
+  }
+}
+
+// миксин
+@mixin font($fontW: bold, $color: #ff0000 /* значение по умолчанию. Лучше ставить в конец */
+) {
+  font-size: $mainFontSize;
+  font-weight: $fontW;
+  font-family: Arial, sans-serif;
+  color: $color;
+}
+
+// $padd... - содержит безграничное значение пишется в конце
+@mixin padd($color, $padd...) {
+  padding: $padd;
+}

@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.block:not(.first) {
+  background: #f1f1f1;
+  height: 200px;
+  width: 300px;
+  border: 2px solid silver;
+  margin-bottom: 20px;
+}
+
+#central_block {
+  padding: 30px;
+}
+#central_block ul {
+  list-style: none;
+  display: inline-block;
+}
+#central_block li {
+  float: left;
+  margin-right: 10px;
+}
+#central_block li a {
+  color: blue;
+}
+#central_block a {
+  color: #cccccc;
+}
+.first {
+  background: #f1f1f1;
+  border: 2px solid silver;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 20px;
+}

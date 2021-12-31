@@ -1,0 +1,84 @@
+// Comment. Он не перемещается в css
+
+// импорт файлов. Прописываем путь
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@include link(silver, red, bl ue, green);
+
+#grid {
+  float: left;
+  width: 100%;
+  // берётся как дочерний элемент
+  > div {
+    @include grid(4, 2%);
+  }
+}
+
+.block:not(.first) {
+  @include padd(blue, 20px 40px 30px 50px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
+
+#central_block {
+  padding: 30px;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+
+  // ИЛИ
+
+  //#central_block ul {
+  //  list-style: none;
+  //  display: inline-block;
+  //}
+
+  li {
+    float: left;
+    width: (100% / 3);
+    //margin-right: 10px;
+
+    a {
+      // используем миксин. Записываем параметры в любой последовательности
+      @include font($fontW: bold, $color: blue);
+      //color: blue;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    // ИЛИ
+    //a:hover {
+    //  color: red;
+    //}
+  }
+
+  a {
+    @include font;
+    //color: $color;
+  }
+
+  span {
+
+  }
+}
+
+.first {
+  background: $bgColor;
+  border: $border;
+  width: $blockWidth;
+  height: 100px;
+  margin-bottom: 20px;
+}

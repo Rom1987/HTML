@@ -1,0 +1,9 @@
+User-agent:*
+Disallow: /assets/
+Allow: /index.html
+Allow: /team of trainers.html
+Allow: /gallery.html
+Allow: /location.html
+Sitemap: http://d98569c5.beget.tech/sitemap.xml
+Host: d98569c5.beget.tech
+Crawl-delay: 5

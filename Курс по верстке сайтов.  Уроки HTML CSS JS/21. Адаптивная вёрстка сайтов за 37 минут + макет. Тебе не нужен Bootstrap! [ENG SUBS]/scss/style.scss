@@ -1,0 +1,23 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+
+
+.three-block {
+
+    // .three-block__column
+    display: grid;
+    /* кол. блоков, 1fr - колонки цифра ширина колонки */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+
+    &__column {
+        background-color: aqua;
+    }
+}

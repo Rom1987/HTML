@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  color: white;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.page {
+  padding: 50px 0;
+}
+
+.page__block {
+  margin-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.block_one .block__body {
+  background-color: #794f45;
+}
+
+.block_two .block__body {
+  background-color: #77608d;
+}
+
+.block_three .block__body {
+  background-color: #7a956b;
+}
+
+.block__container {
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+.block__body {
+  padding: 50px;
+}
+
+@media (max-width: 1170px) {
+  .block__body {
+    padding: calc(20px + 30 * ((100vw - 320px) / 850));
+  }
+}
+
+.block__title {
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1600 - 320)));
+  line-height: 130%;
+  margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1600 - 320)));
+}
+
+.block__text {
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));
+  line-height: 150%;
+}

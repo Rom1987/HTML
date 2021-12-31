@@ -1,0 +1,2 @@
+Шпаргалка по CSS  transitions, анимируемым свойствам и cubic-bezier:
+http://fls.guru/csstransition.html

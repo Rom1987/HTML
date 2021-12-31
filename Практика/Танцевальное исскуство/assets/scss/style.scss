@@ -1,0 +1,263 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+// Адаптивный шрифт
+$maxWidth: 1280;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptiv-padding($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	padding-left: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+	padding-right: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+$varColor1: black;
+
+* {
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.full-screen {
+	color: #fff;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: url('/img/index.jpeg') center / cover no-repeat fixed;
+	align-items: flex-end;
+
+	&__body {
+		flex: 1 1 auto;
+		max-width: 600px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		padding: 0px 20px;
+	}
+
+	&__title,
+	&__text {
+		flex: 0 1 100%;
+	}
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		font-size: 50px;
+		font-style: italic;
+		letter-spacing: 9.6px;
+		margin: 60px 0px 20px 0px;
+	}
+
+	&__text {
+		margin: 0px 0px 20px 0px;
+	}
+}
+
+.header {
+	padding: 25px 9%;
+	background: rgba(0, 0, 0, 1);
+	align-items: center;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1400px) 1fr;
+
+	&__menu {
+		grid-column: 2 / 4;
+	}
+
+	&__list {
+		display: grid;
+		grid-auto-flow: column;
+		justify-items: center;
+
+		& li {
+			margin: 0px 0px 0px 20px;
+
+			&:first-child {
+				margin: 0px;
+			}
+		}
+
+	}
+
+	&__link {
+		color: #fff;
+		text-decoration: none;
+		@include adaptiv-font(18, 12);
+	}
+
+	&_opacity {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.main {
+	position: relative;
+	padding: 60px 0;
+	@include adaptiv-padding(60, 10);
+
+	&__gallery {}
+
+	&__trainers {}
+
+	&_about {
+		background-color: $varColor1;
+		color: #fff;
+	}
+}
+
+.content {
+	text-align: center;
+
+	&__title {
+		margin: 0px 0px 80px 0px;
+		@include adaptiv-font(32, 20);
+		letter-spacing: 10px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	&__gallery {}
+
+	&__timetable {
+		@media (max-width: 700px) {
+			& img {
+				width: 500px;
+			}
+		}
+
+		@media (max-width: 530px) {
+			& img {
+				width: 290px;
+			}
+		}
+	}
+
+	&__location {}
+
+	&_about {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	& p {
+		text-align: justify;
+	}
+}
+
+.gallery {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+	&__image {
+		position: relative;
+		padding: 0px 0px 90% 0px;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__video {
+		position: relative;
+		margin: 20px 0px 0px 0px;
+		padding: 0px 0px 56% 0px;
+
+		& video {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.trainer {
+	display: grid;
+	column-gap: 50px;
+	row-gap: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin: 0px 20px;
+	margin-bottom: 120px;
+
+	&__card {
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+		// box-shadow: 20px -20px 0px #BE0900, 20px 20px 0px #BE0900;
+		box-shadow: 20px -20px 40px #000000;
+		border-radius: 30px;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template: 0.5fr minmax(40px, auto) / 1fr;
+	}
+
+	&__image {
+		position: relative;
+		padding: 0px 0px 110% 0px;
+		margin: 0px 0px 20px 0px;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			border-radius: 30px;
+		}
+	}
+
+	&__description {
+		margin: 0px 20px 20px 20px;
+		text-indent: 40px;
+		text-align: justify;
+	}
+}
+
+.location {
+	&__address {
+		@include adaptiv-font(25, 18);
+		margin-bottom: 60px;
+		line-height: 40px;
+	}
+
+	&__google-map {
+		position: relative;
+		padding: 0px 0px 70% 0px;
+
+		& iframe {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 30px;
+		}
+	}
+}

@@ -1,0 +1,148 @@
+<!--Сообщаем браузеру как стоит обрабатывать эту страницу-->
+<!doctype html>
+<!--Оболочка документа, указываем язык содержимого-->
+<html lang="ru">
+<!--Заголовок страницы, контейнера для других важных данных (не отображается)-->
+
+<head>
+    <!--Заголовок страницы в браузере-->
+    <title>Методология БЭМ</title>
+    <!--Подключаем CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8">
+</head>
+<!--Отображаемое тело страницы-->
+
+<body>
+    <!--Блок-->
+    <div class="about">
+        <!--Элемент. имяклассаблока__имяэлемента.
+    Отвечает на вопрос "что это?"-->
+        <div class="about__body">
+            <div class="about__header">
+                <!--Микс. Используется и блок и элементы-->
+                <div class="about__title title">ABOUT</div>
+                <div class="about__text">We specialize in contemporary, functional, and stunning websites with design
+                    that
+                    really brings that "WOW" factor.
+                    In our design process, we make sure to stay one step ahead of the latest trends,
+                    never forgetting to abide by key web standards.
+                </div>
+            </div>
+            <div class="about__row">
+                <div class="about__column">
+                    <div class="item-about">
+                        <div class="item-about__icon">
+                            <img src="img/about/01.png" alt="">
+                        </div>
+                        <div class="item-about__title">WEB</div>
+                        <div class="item-about__text">We tend to deliver unique and functional design, through
+                            innovation
+                            and creativity.
+                        </div>
+                    </div>
+                </div>
+                <div class="about__column">
+                    <div class="item-about">
+                        <div class="item-about__icon">
+                            <img src="img/about/02.png" alt="">
+                        </div>
+                        <div class="item-about__title">iOS AND ANDROID</div>
+                        <div class="item-about__text">We seek to bring new businesses and customers closer together
+                            through
+                            valuable insights and proper targeting.
+                        </div>
+                    </div>
+                </div>
+                <div class="about__column">
+                    <div class="item-about">
+                        <div class="item-about__icon">
+                            <img src="img/about/03.png" alt="">
+                        </div>
+                        <div class="item-about__title">MARKETING</div>
+                        <div class="item-about__text">We’ll help you establish the right goals and build the right
+                            paths.
+                            Success depends on setting the right intention.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="portfolio__body">
+            <div class="portfolio__title">
+                <div class="portfolio__header">
+                    <div class="portfolio__title title">PORTFOLIO</div>
+                    <ul class="portfolio__menu">
+                        <li class="portfolio__elem_active">ALL</li>
+                        <li>WEB</li>
+                        <li>APPS</li>
+                        <li>OTHER</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio__content">
+                <div class="portfolio__item"></div>
+                <div class="portfolio__item"></div>
+                <div class="portfolio__item"></div>
+                <div class="portfolio__item"></div>
+                <div class="portfolio__item"></div>
+                <div class="portfolio__item"></div>
+            </div>
+            <button>READ MORE</button>
+        </div>
+    </div>
+    <div class="our-partners">
+        <div class="our-partners__body">
+            <div class="our-partners__title">Our partners</div>
+            <div class="our-partners__img">
+                <img src="img/our-partners/logo-2.png" alt="">
+                <img src="img/our-partners/Archiq.png" alt="">
+                <img src="img/our-partners/Thomsoon.png" alt="">
+                <img src="img/our-partners/alex.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="contact__body">
+            <div class="contact__header">
+                <div class="about__title title">CONTACT</div>
+            </div>
+            <div class="contact__content">
+                <div class="contact__inner-content">
+                    <div class="contact__left-column">
+                        <!-- <div class="contact__row-header"> -->
+                        <div class="contact__item">
+                            <label for="input-1">YOUR NAME</label>
+                            <input type="text" name="input-1">
+                        </div>
+                        <div class="contact__item">
+                            <label for="input-2">YOUR E-MAIL</label>
+                            <input type="text" name="input-2">
+                        </div>
+                        <!-- </div> -->
+                        <div class="contact__row-footer">
+                            <label for="textarea">MESSAGE</label>
+                            <textarea name="textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact__right-column">
+                        <p>Have an idea for a project? Just looking to
+                            explore and see the possibilities?
+                            I'm here to help.</p>
+                        <img src="img/contact/Facebook.png" alt="">
+                        <img src="img/contact/in.png" alt="">
+                        <p>Postma Elena</p>
+                        <p>e-mail: postma.elena@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

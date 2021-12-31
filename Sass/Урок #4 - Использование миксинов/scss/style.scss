@@ -1,0 +1,78 @@
+// Comment. Он не перемещается в css
+$bgColor: #f1f1f1; // переменная
+$color: #cccccc;
+$blockWidth: 300px;
+$border: 2px solid silver;
+$mainFontSize: 1.1em;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// миксин
+@mixin font($fontW: bold, $color: red /* значение по умолчанию. Лучше ставить в конец */
+) {
+  font-size: $mainFontSize;
+  font-weight: $fontW;
+  font-family: Arial, sans-serif;
+  color: $color;
+}
+
+// $padd... - содержит безграничное значение пишется в конце
+@mixin padd($color, $padd...) {
+  padding: $padd;
+}
+
+.block:not(.first) {
+  @include padd(blue, 20px 40px 30px 50px);
+  background: $bgColor;
+  height: 200px;
+  width: $blockWidth;
+  border: $border;
+  margin-bottom: 20px;
+}
+
+#central_block {
+  padding: 30px;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+
+  li {
+    float: left;
+    margin-right: 10px;
+
+    a {
+      // используем миксин. Записываем параметры в любой последовательности
+      @include font($fontW: bold, $color: blue);
+      //color: blue;
+    }
+  }
+
+  a {
+    @include font;
+    //color: $color;
+  }
+
+  span {
+
+  }
+}
+
+// ИЛИ
+
+//#central_block > ul {
+//  list-style: none;
+//  display: inline-block;
+//}
+
+.first {
+  background: $bgColor;
+  border: $border;
+  width: $blockWidth;
+  height: 100px;
+  margin-bottom: 20px;
+}

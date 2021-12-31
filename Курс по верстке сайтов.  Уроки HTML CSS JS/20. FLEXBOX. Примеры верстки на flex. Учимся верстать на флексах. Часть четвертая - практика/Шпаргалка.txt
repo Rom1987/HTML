@@ -1,0 +1,3 @@
+Шпаргалка по Flexbox: https://fls.guru/flexbox.html
+Дополнительно, игра flexboxfroggy:
+https://flexboxfroggy.com/
