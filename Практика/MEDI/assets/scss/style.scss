@@ -1,0 +1,347 @@
+// Файл обнуляющих стилей
+@import "nullstyle";
+
+@import "variables";
+
+body {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.wrapper,
+.first-screen {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    background: #4FBFA5;
+    color: $color1;
+}
+
+.header,
+.main {
+    @include adaptiv-value("padding-left", 120, 30, 0);
+    @include adaptiv-value("padding-right", 120, 30, 0);
+    color: white;
+
+    @media (max-width: 854px) {
+        & {
+            padding: 0;
+        }
+    }
+}
+
+.header {
+    background: white;
+    @include adaptiv-value("font-size", 16, 10, 0);
+
+    &__logo {
+        width: 189px;
+        height: 54.98px;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+
+        & img {
+            max-width: 96%;
+            display: block;
+        }
+    }
+
+    &__menu {
+        @media (max-width: 720px) {
+            & {
+                display: none;
+                right: 0px;
+            }
+        }
+    }
+
+    &__list {}
+
+    &__link {
+        color: $color2;
+    }
+
+    @media (max-width: 720px) {
+        & {
+            padding: 10px;
+        }
+
+        &__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+
+            &.active {
+                &:before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+
+                & span {
+                    transform: scale(0);
+                }
+            }
+
+            & span {
+                position: absolute;
+                background-color: $color2;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                background-color: $color2;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:before {
+                top: 0;
+            }
+
+            &:after {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+
+    & li {
+        margin: 15px 10px;
+    }
+
+    &__saloons,
+    &__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__saloons {
+        & img {
+            margin-left: 15px;
+        }
+    }
+
+    &__button {
+        padding: 10px 15px 8px;
+        background: #00868A;
+        text-transform: uppercase;
+        @include adaptiv-value("font-size", 14, 8, 0);
+        color: $color1;
+
+        & img {
+            margin-right: 10px;
+        }
+    }
+
+    & span {
+        height: 100%;
+        opacity: 0.5;
+        border: 1px solid #C4C4C4;
+    }
+}
+
+.main {}
+
+.first-screen {
+    margin-top: 30px;
+
+    &__header {
+        display: grid;
+        grid-template: 1fr / 1fr;
+        align-items: center;
+    }
+
+    &__main-menu {}
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: center;
+        column-gap: 10px;
+        @include adaptiv-value("font-size", 18, 10, 0);
+        line-height: 27px;
+    }
+
+    &__link {
+        color: $color1;
+    }
+
+    &__reserved {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 15px 10px;
+        background: #FFFFFF;
+        @include adaptiv-value("font-size", 18, 12, 0);
+        font-weight: 500;
+    }
+
+    &__desc-and-slider {
+        margin-top: 23px;
+    }
+
+    &__items {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 50px;
+        grid-template: 1fr / 1fr 2fr;
+        justify-content: center;
+    }
+
+    &__desc {}
+
+    &__slider {}
+
+    &__main-category {}
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__title {
+        @include adaptiv-value("font-size", 48, 42, 0);
+        font-weight: 700;
+        line-height: 72px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        line-height: 21px;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        padding: 15px 25px 14px;
+        background: #00868A;
+        color: $color1;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
+
+
+.image-slider {
+    display: grid;
+    grid-template: 1fr / .1fr 1fr;
+    align-items: end;
+
+    &__buttons {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr .5fr 1fr;
+        border: 1px solid $color1;
+        top: -40px;
+        left: -40px;
+    }
+
+    &__previous,
+    &__next {
+        cursor: pointer;
+        transition: 0.6s ease;
+        margin: 15px;
+    }
+
+    &__next {
+        transform: scale(-1, 1);
+    }
+
+    & span {
+        height: 100%;
+        width: 1px;
+        background-color: $color1;
+    }
+
+    &__wrapper {}
+
+    &__image {
+        position: relative;
+        padding: 0px 0px 74% 0px;
+        animation-name: fade;
+        animation-duration: 1.5s;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+}
+
+.main-category {
+    &__container {
+        height: 60px;
+        display: grid;
+        grid-template: 1fr / repeat(4, 1fr);
+    }
+
+    &__elem {
+        background: #00868A;
+        @include adaptiv-value("font-size", 21, 15, 0);
+        font-weight: 500;
+        line-height: 32px;
+        text-align: center;
+
+        &:first-child {
+            background: #00868A;
+            grid-column: 1 / 3;
+        }
+
+        &_hover:hover {
+            cursor: pointer;
+            background-color: #4FBFA5;
+        }
+    }
+}

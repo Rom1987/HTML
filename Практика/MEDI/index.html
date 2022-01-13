@@ -12,46 +12,58 @@
 <body>
     <div class="wrapper">
         <header class="header">
+            <div class="header__burger">
+                <span></span>
+            </div>
             <nav class="header__menu">
                 <ul class="header__list list">
+                    <span></span>
                     <li>
                         <a href="" class="header__logo">
                             <img src="./assets/svg/header/__logo.svg" alt="logo">
                         </a>
                     </li>
+                    <span></span>
                     <li><a href="" class="header__link">+7 (123) 456 78 90</a></li>
+                    <span></span>
                     <li>
                         <a href="" class="header__link list__saloons">
                             <p> Наши салоны </p>
                             <img src="./assets/svg/header/__dropdown-arrow.svg" alt="dropdown-arrow">
                         </a>
                     </li>
+                    <span></span>
                     <li>
                         <button class="header__link list__button">
                             <img src="./assets/svg/header/__simple-line-icons_eye.svg" alt="simple-line-icons_eye">
                             <p> Версия для слабовидящих </p>
                         </button>
                     </li>
+                    <span></span>
                     <li>
                         <a href="" class="header__link">
                             <img src="./assets/svg/header/__Vk.svg" alt="vk">
                         </a>
                     </li>
+                    <span></span>
                     <li>
                         <a href="" class="header__link">
                             <img src="./assets/svg/header/__youtube.svg" alt="youtube">
                         </a>
                     </li>
+                    <span></span>
                     <li>
                         <a href="" class="header__link">
                             <img src="./assets/svg/header/__facebook.svg" alt="facebook">
                         </a>
                     </li>
+                    <span></span>
                     <li>
                         <a href="" class="header__link">
                             <img src="./assets/svg/header/__instagram.svg" alt="instagram">
                         </a>
                     </li>
+                    <span></span>
                 </ul>
             </nav>
         </header>
@@ -65,9 +77,10 @@
                             <li><a href="" class="first-screen__link">Стоматология</a></li>
                             <li><a href="" class="first-screen__link">Лазерная медицина</a></li>
                             <li><a href="" class="first-screen__link">Контакты</a></li>
+                            <li> <button class="first-screen__reserved">Запись на прием</button>
+                            </li>
                         </ul>
                     </nav>
-                    <button class="first-screen__reserved">Запись на прием</button>
                 </div>
                 <div class="first-screen__desc-and-slider">
                     <div class="first-screen__items">
@@ -81,25 +94,46 @@
                             </div>
                             <button class="desc__button">подробнее</button>
                         </div>
-                        <div class="first-screen__slider">
-                            <div class="first-screen__image">
-                                <img src="./assets/img/1.jpg" alt="">
+                        <div class="first-screen__slider image-slider">
+                            <div class="image-slider__buttons">
+                                <a class="image-slider__previous" onclick="previousSlide()">
+                                    <img src="./assets/svg/image-slider/__arrow.svg" alt="" srcset="">
+                                </a>
+                                <span></span>
+                                <a class="image-slider__next" onclick="nextSlide()">
+                                    <img src="./assets/svg/image-slider/__arrow.svg" alt="" srcset="">
+                                </a>
                             </div>
-                            <!-- <button></button>
-                        <button></button> -->
+                            <div class="image-slider__wrapper">
+                                <!-- Первый слайд -->
+                                <div class="image-slider__image">
+                                    <img src="./assets/img/1.jpg" />
+                                </div>
+                                <!-- Второй слайд -->
+                                <div class="image-slider__image">
+                                    <img src="./assets/img/2.jpg" />
+                                </div>
+                                <!-- Третий слайд -->
+                                <div class="image-slider__image">
+                                    <img src="./assets/img/3.jpg" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="first-screen__main-category main-category">
                     <div class="main-category__container">
-                        <div class="main-category__elem">Комплексные процедуры</div>
-                        <div class="main-category__elem">Центр обучения</div>
-                        <div class="main-category__elem">VIP клиентам</div>
+                        <div class="main-category__elem main-category__elem_hover">
+                            <p>Комплексные процедуры</p>
+                        </div>
+                        <div class="main-category__elem main-category__elem_hover">Центр обучения</div>
+                        <div class="main-category__elem main-category__elem_hover">VIP клиентам</div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
